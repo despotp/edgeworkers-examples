@@ -18,6 +18,6 @@ export function onClientRequest(request) {
 
   info["source"] = "Akamai EdgeWorkers";
 
-  request.respondWith(200, {}, JSON.stringify({geoInfo : info}));
+  request.respondWith(200, {'Content-Type': ['application/json;charset=utf-8']}, JSON.stringify({geoInfo : info}));
   
 }
